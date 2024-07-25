@@ -1,5 +1,8 @@
 # L-System Decoder
 
+This script attempts to find all rulesets of an L-System given at least two generations of output string.
+
+
 ## Usage
 
 ```bash
