@@ -7,9 +7,9 @@ class Decoder:
 
     def __init__(self, file_path: Path) -> None:
         with open(file_path, "r") as f:
-            self.contents = f.read()
-            self.possible_solutions = []
-            self.partial_solution = {}
+            self.contents: str = f.read()
+            self.possible_solutions: list[dict] = []
+            self.valid_solutions: list[dict] = []
 
         self.generations = self.contents.split()
 
@@ -29,10 +29,10 @@ class Decoder:
                 local_solutions = self.find_possible_solutions(
                     self.generations[i - 1], self.generations[i]
                 )
-                if len(local_solutions) == 1:
-                    self.update_partial_solution(local_solutions[0])
-                self.possible_solutions += local_solutions
+
+                self.update_possible_solutions(local_solutions)
                 logging.debug(f"Possible solutions:\n{self.possible_solutions}")
+
                 # iterate through the possible solutions to see if it solves the next ones
                 solutions = self.possible_solutions.copy()
                 for solution in solutions:
@@ -41,22 +41,40 @@ class Decoder:
                             self.generate(self.generations[i - 1], solution)
                             != self.generations[i]
                         ):
-                            self.possible_solutions.remove(solution)
                             break
 
                         if i == (len(self.generations) - 1):
                             logging.info(f"Found solution: {solution}")
                             found_solution = True
                             if solution not in self.possible_solutions:
-                                self.possible_solutions.append(solution)
+                                self.valid_solutions.append(solution)
 
-        return self.possible_solutions
+        return self.valid_solutions
     
-    def update_partial_solution(self, solution: dict) -> None:
-        print(self.partial_solution)
-        print(solution)
-        self.partial_solution.update(solution)
-        self.possible_solutions.append(self.partial_solution)
+    def update_possible_solutions(self, new_solutions: list[dict]) -> None:
+        previous_solutions = self.possible_solutions.copy()
+        self.possible_solutions = []
+
+        for new_sol in new_solutions:
+            has_subset = False
+            for prev_sol in previous_solutions:
+                if self.is_dict_subset(prev_sol, new_sol):
+                    has_subset = True
+                    prev_sol.update(new_sol)
+                    self.possible_solutions.append(prev_sol)
+            if not has_subset:
+                self.possible_solutions.append(new_sol)
+
+
+
+    @staticmethod
+    def is_dict_subset(dict_a: dict, dict_b: dict) -> bool:
+        for key_a, value_a in dict_a.items():
+            if key_a in dict_b.keys():
+                if dict_b[key_a] != value_a:
+                    return False
+        return True
+
 
 
     def find_possible_solutions(
