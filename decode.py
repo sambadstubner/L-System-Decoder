@@ -46,7 +46,6 @@ class Decoder:
                             if solution not in self.possible_solutions:
                                 self.possible_solutions.append(solution)
 
-        logging.info(f"Done: Found {len(self.possible_solutions)} solution(s)")
         return self.possible_solutions
 
     def find_possible_solutions(
