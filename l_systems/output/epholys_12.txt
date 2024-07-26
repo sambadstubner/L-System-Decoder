@@ -1,0 +1,5 @@
+X
+J[+++Y][---Z]X
+H[+++G[---V]VY][---G[+++V]VZ]J[+++Y][---Z]X
+F[+++G[---G[W][-W][+W]]G[W][-W][+W]G[---V]VY][---G[+++G[W][-W][+W]]G[W][-W][+W]G[+++V]VZ]H[+++G[---V]VY][---G[+++V]VZ]J[+++Y][---Z]X
+FH[+++G[---G[G[A][-A][+A]W][-G[A][-A][+A]W][+G[A][-A][+A]W]]G[G[A][-A][+A]W][-G[A][-A][+A]W][+G[A][-A][+A]W]G[---G[W][-W][+W]]G[W][-W][+W]G[---V]VY][---G[+++G[G[A][-A][+A]W][-G[A][-A][+A]W][+G[A][-A][+A]W]]G[G[A][-A][+A]W][-G[A][-A][+A]W][+G[A][-A][+A]W]G[+++G[W][-W][+W]]G[W][-W][+W]G[+++V]VZ]F[+++G[---G[W][-W][+W]]G[W][-W][+W]G[---V]VY][---G[+++G[W][-W][+W]]G[W][-W][+W]G[+++V]VZ]H[+++G[---V]VY][---G[+++V]VZ]J[+++Y][---Z]X

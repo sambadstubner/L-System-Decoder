@@ -1,0 +1,5 @@
+Y
+XF[+X][-X]
+F[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]
+FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]FFFF[+FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]][-FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]]
+FFFF[+F[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]][-FFFFF[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]]FFFFFFFF[+FFFF[+F[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]][-FFFFF[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]]][-FFFF[+F[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]][-FFFFF[+YX][-FYX]FF[+F[+YX][-FYX]][-F[+YX][-FYX]]FF[+XF[+X][-X]F[+YX][-FYX]][-FFXF[+X][-X]F[+YX][-FYX]]]]

@@ -165,5 +165,5 @@ cython_debug/
 notes.txt
 test.py
 saves/
-l_systems/output/epholys_*.txt
-gpu_decode.py
+# l_systems/output/epholys_*.txt
+decoder

@@ -1,0 +1,5 @@
+X
+FF[-L][+R]X
+FTFT[-G-G-G-G-G-G][+H+H+H+H+H+H]FF[-L][+R]X
+FTFFFTFF[-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]][+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]]FTFT[-G-G-G-G-G-G][+H+H+H+H+H+H]FF[-L][+R]X
+FTFFFTFTFTFFFTFT[-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]-FT[+FTG-G-G-G-G-G][-FTG-G-G-G-G-G]][+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]+FT[-FTH+H+H+H+H+H][+FTH+H+H+H+H+H]]FTFFFTFF[-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]-F[+FL][-FL]][+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]+F[-FR][+FR]]FTFT[-G-G-G-G-G-G][+H+H+H+H+H+H]FF[-L][+R]X
