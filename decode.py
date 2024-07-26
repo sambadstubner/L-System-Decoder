@@ -9,6 +9,7 @@ class Decoder:
         with open(file_path, "r") as f:
             self.contents = f.read()
             self.possible_solutions = []
+            self.partial_solution = {}
 
         self.generations = self.contents.split()
 
@@ -28,8 +29,10 @@ class Decoder:
                 local_solutions = self.find_possible_solutions(
                     self.generations[i - 1], self.generations[i]
                 )
+                if len(local_solutions) == 1:
+                    self.update_partial_solution(local_solutions[0])
                 self.possible_solutions += local_solutions
-                logging.debug(self.possible_solutions)
+                logging.debug(f"Possible solutions:\n{self.possible_solutions}")
                 # iterate through the possible solutions to see if it solves the next ones
                 solutions = self.possible_solutions.copy()
                 for solution in solutions:
@@ -40,6 +43,7 @@ class Decoder:
                         ):
                             self.possible_solutions.remove(solution)
                             break
+
                         if i == (len(self.generations) - 1):
                             logging.info(f"Found solution: {solution}")
                             found_solution = True
@@ -47,6 +51,13 @@ class Decoder:
                                 self.possible_solutions.append(solution)
 
         return self.possible_solutions
+    
+    def update_partial_solution(self, solution: dict) -> None:
+        print(self.partial_solution)
+        print(solution)
+        self.partial_solution.update(solution)
+        self.possible_solutions.append(self.partial_solution)
+
 
     def find_possible_solutions(
         self, previous_generation: str, current_generation: str
@@ -113,8 +124,8 @@ class Decoder:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
-
+    logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.DEBUG)
+    sys.setrecursionlimit(10000)
     rules = Decoder(sys.argv[1]).decode()
     for ruleset in rules:
         print(f"{ruleset}")

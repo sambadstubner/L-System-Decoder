@@ -1,0 +1,5 @@
+VZFFF
+[+++W][---W]YV[-FFF][+FFF]FFFF
+[++++X[-W]Z][---+X[-W]Z]YZ[+++W][---W]YV[-FFF][+FFF]FFFF
+[++++-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F][---+-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F]YZ[-FFF][+FFF]F[++++X[-W]Z][---+X[-W]Z]YZ[+++W][---W]YV[-FFF][+FFF]FFFF
+[++++-+X[-W]Z[+-W[+X]Z][-FFF][+FFF]F[-+-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F][-FFF][+FFF]F][---+-+X[-W]Z[+-W[+X]Z][-FFF][+FFF]F[-+-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F][-FFF][+FFF]F]YZ[-FFF][+FFF]F[-FFF][+FFF]F[++++-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F][---+-W[+X]Z[-+X[-W]Z][-FFF][+FFF]F]YZ[-FFF][+FFF]F[++++X[-W]Z][---+X[-W]Z]YZ[+++W][---W]YV[-FFF][+FFF]FFFF

@@ -1,0 +1,5 @@
+Y
+YFX[+Y][-Y]
+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]
+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]][-YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]]
+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]][-YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]][-YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]]][-YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]][-YFX[+Y][-Y]FX[-FFF][+FFF]FX[+YFX[+Y][-Y]][-YFX[+Y][-Y]]]]
