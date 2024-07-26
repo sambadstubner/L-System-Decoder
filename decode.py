@@ -3,7 +3,6 @@ from pathlib import Path
 import sys
 
 
-
 class Decoder:
 
     def __init__(self, file_path: Path) -> None:
@@ -47,10 +46,12 @@ class Decoder:
                             if solution not in self.possible_solutions:
                                 self.possible_solutions.append(solution)
 
-        logging.info("Done Find Possible Solutions")
+        logging.info(f"Done: Found {len(self.possible_solutions)} solution(s)")
         return self.possible_solutions
 
-    def find_possible_solutions(self, previous_generation: str, current_generation: str) -> list[dict]:
+    def find_possible_solutions(
+        self, previous_generation: str, current_generation: str
+    ) -> list[dict]:
         splits = self.split_generation(previous_generation, current_generation)
         return [dict(zip(previous_generation, split)) for split in splits]
 
@@ -78,11 +79,13 @@ class Decoder:
                 return char_to_part[char] == part
             return True
 
-        def split_recursive(A: str, B: str, current_split: list, char_to_part: dict, all_splits: list) -> None:
+        def split_recursive(
+            A: str, B: str, current_split: list, char_to_part: dict, all_splits: list
+        ) -> None:
             """
             Recursive function split B with the following rules
             1. Split the current generation for each corresponding character in the previous generation
-            2. For each same character in the previous generation, 
+            2. For each same character in the previous generation,
                the cooresponding groupd in the current generation must also match
             """
             if not A:
@@ -111,7 +114,7 @@ class Decoder:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
+    logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
 
     rules = Decoder(sys.argv[1]).decode()
     for ruleset in rules:
