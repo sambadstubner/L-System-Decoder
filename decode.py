@@ -13,7 +13,7 @@ class Decoder:
 
         self.generations = self.contents.split()
 
-    def decode(self):
+    def decode(self) -> list[dict]:
         self.rules = {}
         self.axiom = self.generations[0]
         found_solution = False
@@ -26,7 +26,7 @@ class Decoder:
             """
             if not found_solution:
                 logging.info(f"No found solution yet, decoding generation {i}")
-                local_solutions = self.decode_generation(
+                local_solutions = self.find_possible_solutions(
                     self.generations[i - 1], self.generations[i]
                 )
                 self.possible_solutions += local_solutions
@@ -48,18 +48,17 @@ class Decoder:
                                 self.possible_solutions.append(solution)
 
         logging.info("Done Find Possible Solutions")
-        # common_rules = self.find_unique_consistent_dicts(self.possible_solutions[1:])
         return self.possible_solutions
 
-    def decode_generation(self, previous_generation: str, current_generation: str):
-        splits = self.split_string(previous_generation, current_generation)
-        possible_rules = []
-        for split in splits:
-            possible_rules.append(dict(zip(previous_generation, split)))
-        return possible_rules
+    def find_possible_solutions(self, previous_generation: str, current_generation: str) -> list[dict]:
+        splits = self.split_generation(previous_generation, current_generation)
+        return [dict(zip(previous_generation, split)) for split in splits]
 
     @staticmethod
     def generate(current_population: str, rules: dict) -> str:
+        """
+        Generate the next generation given the previous generation and a set of rules
+        """
         new_population = ""
         for i in current_population:
             if i in rules.keys():
@@ -70,15 +69,22 @@ class Decoder:
         return new_population
 
     @staticmethod
-    def split_string(A, B):
-        # Helper function to check if the current split is valid
+    def split_generation(previous_generation: str, current_generation: str) -> list:
         def is_valid_partial_split(part, char, char_to_part):
+            """
+            Checks if the current split already appears in the strings and if so that they match
+            """
             if char in char_to_part:
                 return char_to_part[char] == part
             return True
 
-        # Recursive function to generate valid splits
-        def split_recursive(A, B, current_split, char_to_part, all_splits):
+        def split_recursive(A: str, B: str, current_split: list, char_to_part: dict, all_splits: list) -> None:
+            """
+            Recursive function split B with the following rules
+            1. Split the current generation for each corresponding character in the previous generation
+            2. For each same character in the previous generation, 
+               the cooresponding groupd in the current generation must also match
+            """
             if not A:
                 if not B:
                     all_splits.append(current_split)
@@ -99,15 +105,14 @@ class Decoder:
                     )
 
         all_splits = []
-        split_recursive(A, B, [], {}, all_splits)
+        split_recursive(previous_generation, current_generation, [], {}, all_splits)
 
         return all_splits
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
+    logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
 
-    decoder = Decoder(sys.argv[1])
-    rules = decoder.decode()
+    rules = Decoder(sys.argv[1]).decode()
     for ruleset in rules:
-        print(f"{ruleset}\n\n")
+        print(f"{ruleset}")
