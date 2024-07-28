@@ -55,7 +55,7 @@ A -> AB
 B -> A
 ```
 ### Optimizing
-It can be very intensive to iterate through all possible way to split a string a given number of ways so it is important that we check if a set of groups is valid as split a string and stop the iteration immediately when is not valid.
+It can be very intensive to iterate through all possible way to split a string a given number of ways so it is important that we check if a set of groups is valid as we split a string and stop the iteration immediately when is not valid.
 
 To minimize the amount of generations needed to be split, after a set of possible rules are generated, we check to see if it applies to all generations. This is done by applying the rules to each generation and comparing it with the input generations. If the rules can correctly replicate the input, then it is a valid ruleset and there is no need to decode future generations.
 
