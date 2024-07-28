@@ -46,11 +46,11 @@ public:
                         }
 
                         if (j == (generations.size() - 1)) {
-                            std::cout << "Found solution: ";
+                            std::cout << "Found solution: {";
                             for (const auto& pair : solution) {
-                                std::cout << "{" << pair.first << ": " << pair.second << "} ";
+                                std::cout << pair.first << ": " << pair.second << ", ";
                             }
-                            std::cout << std::endl;
+                            std::cout << "}" << std::endl;
                             found_solution = true;
                             if (std::find(possible_solutions.begin(), possible_solutions.end(), solution) == possible_solutions.end()) {
                                 valid_solutions.push_back(solution);

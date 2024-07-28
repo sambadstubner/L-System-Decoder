@@ -7,12 +7,12 @@ import sys
 class Decoder:
 
     def __init__(self, file_path: Path) -> None:
-        with open(file_path, "r") as f:
-            self.contents: str = f.read()
-
         self.possible_solutions: list[dict] = []
         self.valid_solutions: list[dict] = []
         self.generations = self.contents.split()
+
+        with open(file_path, "r") as f:
+            self.contents: str = f.read()
 
     def decode(self) -> list[dict]:
         self.rules = {}
