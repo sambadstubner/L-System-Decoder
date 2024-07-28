@@ -9,10 +9,11 @@ class Decoder:
     def __init__(self, file_path: Path) -> None:
         self.possible_solutions: list[dict] = []
         self.valid_solutions: list[dict] = []
-        self.generations = self.contents.split()
-
+        
         with open(file_path, "r") as f:
             self.contents: str = f.read()
+
+        self.generations = self.contents.split()
 
     def decode(self) -> list[dict]:
         self.rules = {}
@@ -47,7 +48,7 @@ class Decoder:
                         if i == (len(self.generations) - 1):
                             logging.info(f"Found solution: {solution}")
                             found_solution = True
-                            if solution not in self.possible_solutions:
+                            if solution not in self.valid_solutions:
                                 self.valid_solutions.append(solution)
 
         return self.valid_solutions
@@ -143,8 +144,11 @@ class Decoder:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.DEBUG)
+    logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
     sys.setrecursionlimit(10000)
-    rules = Decoder(sys.argv[1]).decode()
-    for ruleset in rules:
-        print(f"{ruleset}")
+    ruleset = Decoder(sys.argv[1]).decode()
+    print("\n\nSolutions:")
+    for rules in ruleset:
+        for key, value in rules.items():
+            print(f"{key} -> {value}")
+        print("\n")
