@@ -33,6 +33,9 @@ class Decoder:
                 )
 
                 self.update_possible_solutions(local_solutions)
+                if len(self.possible_solutions) == 0:
+                    logging.error("Program failed, no solutions found")
+                    return []
                 logging.debug(f"Number of possible solutions for generation {i + 1}: {len(self.possible_solutions)}")
                 logging.debug(f"Known rules: {self.known_rules}")
 
