@@ -52,7 +52,7 @@ public:
                             }
                             std::cout << "}" << std::endl;
                             found_solution = true;
-                            if (std::find(possible_solutions.begin(), possible_solutions.end(), solution) == possible_solutions.end()) {
+                            if (std::find(valid_solutions.begin(), valid_solutions.end(), solution) == valid_solutions.end()) {
                                 valid_solutions.push_back(solution);
                             }
                         }
@@ -179,9 +179,10 @@ int main(int argc, char* argv[]) {
 
     Decoder<char, std::string> decoder(argv[1]);
     auto rules = decoder.decode();
+    std::cout << "Rules:" << std::endl;
     for (const auto& ruleset : rules) {
         for (const auto& pair : ruleset) {
-            std::cout << "{" << pair.first << ": " << pair.second << "} ";
+            std::cout << pair.first << "->" << pair.second << std::endl;
         }
         std::cout << std::endl;
     }

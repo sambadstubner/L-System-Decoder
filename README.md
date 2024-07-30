@@ -59,5 +59,5 @@ It can be very intensive to iterate through all possible way to split a string a
 
 To minimize the amount of generations needed to be split, after a set of possible rules are generated, we check to see if it applies to all generations. This is done by applying the rules to each generation and comparing it with the input generations. If the rules can correctly replicate the input, then it is a valid ruleset and there is no need to decode future generations.
 
-In some more complex L-Systems, rules only apply on alternating generations or don't apply until much later. In this scenario, we keep track of previously found possible solutions. When a new set of solutions are found, we do not contradict newly found solutions, and update the rule set with the additional information found.
+In some more complex L-Systems, rules only apply on alternating generations or don't apply until much later. In this scenario, we keep track of previously found possible solutions. When a new set of solutions are found, we keep the previous solutions that do not contradict newly found solutions, and update the rule sets with the new information found.
 
