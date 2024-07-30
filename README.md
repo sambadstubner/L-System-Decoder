@@ -61,3 +61,8 @@ To minimize the amount of generations needed to be split, after a set of possibl
 
 In some more complex L-Systems, rules only apply on alternating generations or don't apply until much later. In this scenario, we keep track of previously found possible solutions. When a new set of solutions are found, we keep the previous solutions that do not contradict newly found solutions, and update the rule sets with the new information found.
 
+If there is only one possible way to group a generation without contradictions then we know those rules must be true and we will only consider splits in future generations that follow those rules
+
+### Future Features
+- Allow for the X -> "" rule
+
